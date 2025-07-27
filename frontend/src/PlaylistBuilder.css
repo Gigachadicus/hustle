@@ -390,3 +390,301 @@
     min-width: auto;
   }
 }
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 300px;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.notification-success {
+  background-color: #28a745;
+}
+
+.notification-error {
+  background-color: #dc3545;
+}
+
+.notification-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+  padding: 0;
+  line-height: 1;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Header Styles */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.btn-profile {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-profile:hover {
+  background-color: #5a6268;
+}
+
+/* Button Styles */
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}
+
+/* Count Badge */
+.count-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Saved Playlists Modal */
+.saved-playlists-modal {
+  min-width: 600px;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.saved-playlists-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+
+.saved-playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+}
+
+.playlist-info h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.playlist-info p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.playlist-info small {
+  color: #888;
+  font-size: 12px;
+}
+
+.playlist-item-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Playlist Detail View */
+.playlist-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.playlist-detail-header h3 {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  color: #333;
+}
+
+.playlist-detail-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.playlist-detail-info {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.playlist-detail-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Playlist Exercises Grid */
+.playlist-exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.playlist-exercise-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.playlist-exercise-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.exercise-image {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+}
+
+.exercise-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exercise-info {
+  padding: 10px;
+}
+
+.exercise-info h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .saved-playlists-modal {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+  
+  .playlist-detail-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .playlist-detail-header h3 {
+    text-align: center;
+  }
+  
+  .playlist-exercises-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .notification {
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+  }
+}
